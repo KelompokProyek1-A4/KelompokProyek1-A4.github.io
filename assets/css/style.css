@@ -94,7 +94,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 30px;
 }
 
 @media (max-width: 991px) {
@@ -416,6 +416,10 @@ h6 {
 
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+img, svg{
+  vertical-align: bottom !important;
 }
 
 @media (max-width: 991px) {
