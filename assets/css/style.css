@@ -1374,3 +1374,48 @@ section {
     text-align-last: center;
   }
 }
+
+.blockquote {
+  max-width:600px;
+  margin: 10px 30px;
+  padding : 25px;
+  background:#16df7e;
+  border: 1px solid #075730;
+  color:#000503;
+  box-sizing: border-box;
+}
+
+blockquote--bordered{
+  border-left-width: 10px;
+}
+
+.blockquote--quoted::before {
+  content: "\201c";
+  font-size: 100px;
+  color:#16df7e ;
+  margin-bottom: -40px;
+  margin-top: -20px;
+}
+
+.blockquote__text {
+  font-family: 'Gelasio', serif;
+  font-style: italic;
+  font-size: 1.15cm;
+  line-height: 1.5;
+  margin: 0 ;
+}
+
+.blockquote__text:not(:last-child){
+  margin-bottom: 1cm;
+}
+
+.blockquote__text--credit{
+  font-weight: bold;
+  font-size: 0.8cm;
+  text-align: right;
+
+}
+
+.blockquote__text--credit ::before{
+  content: "\2014\0020"
+}
