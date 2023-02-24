@@ -28,6 +28,8 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/blockquite.css" rel="stylesheet">
 
+  <script src = "https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <!-- =======================================================
   * Template Name: eNno - v4.10.0
   * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
@@ -53,6 +55,7 @@
           <li><a class="nav-link scrollto" href="#services">Peran</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Kelompok</a></li>
+          <li><a class="nav-link scrollto" href="#assignment">Tugas</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li><a class="getstarted scrollto" href="#about">Mulai</a></li>
         </ul>
@@ -464,10 +467,97 @@
       </div>
     </section><!-- End Team Section -->
 
-<!-- ======= Table Section ======= -->
+    <!-- ======= Table Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container">
         
+
+
+    <!-- ======= Assignment Section ======= -->
+    <section id="assignment" class="assignment">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Tugas</span>
+          <h2>Tugas</h2>
+          <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+        </div>
+
+        <div class="row">
+
+          <div class="col align-items-stretch">
+            <div class="row">
+              <table class="table container" id="table">
+                <thead>
+                  <tr>
+                    <th class="text-center" scope="col">No</th>
+                    <th class="text-center" scope="col">Judul</th>
+                    <th class="text-center" scope="col">Kategori</th>
+                  </tr>
+                  <script>
+                    $(document).ready(function () {
+                      // FETCHING DATA FROM JSON FILE
+                      $.getJSON("BSDatabase.json", function (data) { 
+                          var student = '';
+                  
+                          // ITERATING THROUGH OBJECTS
+                          $.each(data, function (key, value) {
+                              //CONSTRUCTION OF ROWS HAVING
+                              // DATA FROM JSON OBJECT
+                              student += '<tr class="text-center">';
+                              student += '<td>' + 
+                                  value.id + '</td>';
+                  
+                              student += '<td>' + 
+                                  value.title + '</td>';
+                  
+                              student += '<td>' + 
+                                  value.canal + '</td>';
+                  
+                              student += '</tr>';
+                          });
+                            
+                          //INSERTING ROWS INTO TABLE 
+                          $('#table').append(student);
+                      });
+                    })
+                  </script>
+                </thead>
+                <!-- <tbody>
+                  <tr>
+                    <td>Daniel Reinhard P</td>
+                    <td>daniel.reinhard.tif422@polban.ac.id</td>
+                  </tr>
+                  <tr>
+                    <td>Muhamad Fahrizal Al-Zaelani</td>
+                    <td>muhamad.fahrizal.tif422@polban.ac.id</td>
+                  </tr>
+                  <tr>
+                    <td>Muhammad Fikri Nur Sya'bani</td>
+                    <td>muhammad.fikri.tif422@polban.ac.id</td>
+                  </tr>
+                  <tr>
+                    <td>Naffa Lenteranisa</td>
+                    <td>naffa.lenteranisa.tif422@polban.ac.id</td>
+                  </tr>
+                  <tr>
+                    <td>Rahma Divina</td>
+                    <td>rahma.divina.tif422@polban.ac.id</td>
+                  </tr>
+                </tbody> -->
+              </table><!-- end of pricing section -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+    <!-- ======= Table Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
 
 
     <!-- ======= Contact Section ======= -->
