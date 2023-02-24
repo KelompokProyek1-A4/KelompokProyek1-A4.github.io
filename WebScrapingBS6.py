@@ -10,14 +10,24 @@ URL = "https://www.cnnindonesia.com/"
 page = requests.get(URL)
 
 soup = BeautifulSoup(page.content, "html.parser")
-popularHeadline = soup.find(class_="headline__terpopuler-list")
+latest = soup.find(class_="l_content")
 
-title = popularHeadline.find_all("h2", class_="title")
-canal = popularHeadline.find_all("span", class_="kanal")
+title = latest.find_all("h2", class_="title")
+canal = latest.find_all("span", class_="kanal")
+img = latest.find_all("img")
+url = latest.find_all("a")
+
+# print(latest)
+
+link = [url['href'] for url in url]
+imgurl = [img['src'] for img in img]
+
+# print(link)
 
 for i in range(len(title)):
-    res.append({"id" : i+1, "title" : title[i].text.strip(), "canal" : canal[i].text.strip()})
+    res.append({"id" : i+1, "title" : title[i].text.strip(), "canal" : canal[i].text.strip(), "img" : imgurl[i], "link" : link[i]})
 
+# print(link[1])
 JsonRes = json.dumps(res)
 JsonFile = open("BSDatabase.json", "w")
 JsonFile.write(JsonRes)

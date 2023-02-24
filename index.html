@@ -491,6 +491,7 @@
                 <thead>
                   <tr>
                     <th class="text-center" scope="col">No</th>
+                    <th class="text-center" scope="col">Gambar</th>
                     <th class="text-center" scope="col">Judul</th>
                     <th class="text-center" scope="col">Kategori</th>
                   </tr>
@@ -507,14 +508,17 @@
                               student += '<tr class="text-center">';
                               student += '<td>' + 
                                   value.id + '</td>';
+
+                              student += '<td>' + '<img src="' + value.img + '" alt=""></img>' +
+                                  '</td>';
                   
-                              student += '<td>' + 
-                                  value.title + '</td>';
+                              student += '<td><a href="' + value.link + '">' + 
+                                  value.title + '</a></td>';
                   
                               student += '<td>' + 
                                   value.canal + '</td>';
                   
-                              student += '</tr>';
+                              student += '</a></tr><hr>';
                           });
                             
                           //INSERTING ROWS INTO TABLE 
