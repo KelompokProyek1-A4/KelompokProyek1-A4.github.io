@@ -28,7 +28,7 @@ for i in range(len(title)):
     res.append({"id" : i+1, "title" : title[i].text.strip(), "canal" : canal[i].text.strip(), "img" : imgurl[i], "link" : link[i]})
 
 # print(link[1])
-JsonRes = json.dumps(res)
+JsonRes = json.dumps(res, indent=4)
 JsonFile = open("BSDatabase.json", "w")
 JsonFile.write(JsonRes)
 JsonFile.close()
