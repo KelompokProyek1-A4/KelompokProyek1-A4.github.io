@@ -478,8 +478,8 @@
       <div class="container">
 
         <div class="section-title">
-          <span>Tugas</span>
-          <h2>Tugas</h2>
+          <span>Tugas BeautifulSoup</span>
+          <h2>Tugas BeautifulSoup</h2>
           <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
         </div>
 
@@ -527,28 +527,78 @@
                     })
                   </script>
                 </thead>
-                <!-- <tbody>
+              </table><!-- end of pricing section -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+    <!-- ======= Assignment Section ======= -->
+    <section id="assignment" class="assignment">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Tugas Selenium</span>
+          <h2>Tugas Selenium</h2>
+          <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+        </div>
+
+        <div class="row">
+
+          <div class="col align-items-stretch">
+            <div class="row">
+              <table class="table container" id="table2">
+                <thead>
                   <tr>
-                    <td>Daniel Reinhard P</td>
-                    <td>daniel.reinhard.tif422@polban.ac.id</td>
+                    <th class="text-center" scope="col">Rank</th>
+                    <th class="text-center" scope="col">Song</th>
+                    <th class="text-center" scope="col">Singer</th>
+                    <th class="text-center" scope="col">Last Week Rank</th>
+                    <th class="text-center" scope="col">Peak Rank</th>
+                    <th class="text-center" scope="col">Weeks on Chart</th>
                   </tr>
-                  <tr>
-                    <td>Muhamad Fahrizal Al-Zaelani</td>
-                    <td>muhamad.fahrizal.tif422@polban.ac.id</td>
-                  </tr>
-                  <tr>
-                    <td>Muhammad Fikri Nur Sya'bani</td>
-                    <td>muhammad.fikri.tif422@polban.ac.id</td>
-                  </tr>
-                  <tr>
-                    <td>Naffa Lenteranisa</td>
-                    <td>naffa.lenteranisa.tif422@polban.ac.id</td>
-                  </tr>
-                  <tr>
-                    <td>Rahma Divina</td>
-                    <td>rahma.divina.tif422@polban.ac.id</td>
-                  </tr>
-                </tbody> -->
+                  <script>
+                    $(document).ready(function () {
+                      // FETCHING DATA FROM JSON FILE
+                      $.getJSON("SLDatabase.json", function (data) { 
+                          var student = '';
+                  
+                          // ITERATING THROUGH OBJECTS
+                          $.each(data, function (key, value) {
+                              //CONSTRUCTION OF ROWS HAVING
+                              // DATA FROM JSON OBJECT
+                              student += '<tr class="text-center">';
+                              student += '<td>' + 
+                                  value.current_rank + '</td>';
+                              
+                              student += '<td>' + 
+                                  value.song_title + '</td>';
+                              
+                              student += '<td>' + 
+                                  value.singer + '</td>';
+                              
+                              student += '<td>' + 
+                                  value.last_week_rank + '</td>';
+
+                              student += '<td>' + 
+                                  value.peak_rank + '</td>';
+                              
+                              student += '<td>' + 
+                                  value.weeks_on_chart + '</td>';
+                  
+                              student += '</tr><hr>';
+                          });
+                            
+                          //INSERTING ROWS INTO TABLE 
+                          $('#table2').append(student);
+                      });
+                    })
+                  </script>
+                </thead>
               </table><!-- end of pricing section -->
             </div>
           </div>
