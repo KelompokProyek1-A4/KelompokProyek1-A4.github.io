@@ -33,6 +33,22 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Power BI Frame CSS
+--------------------------------------------------------------*/
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  max-width: 1140px;
+  height: 541.25px;
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
