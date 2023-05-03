@@ -553,9 +553,9 @@
 
           <div class="col align-items-stretch">
             <div class="row">
-              <table class="table container" id="table2">
-                <thead>
-                  <tr>
+              <table class="table container table-sm" style="background-color: #59E8A3;" id="table2">
+                <thead >
+                  <tr style="background-color: #51cf92;">
                     <th class="text-center" scope="col">Rank</th>
                     <th class="text-center" scope="col">Song</th>
                     <th class="text-center" scope="col">Singer</th>
@@ -563,10 +563,12 @@
                     <th class="text-center" scope="col">Peak Rank</th>
                     <th class="text-center" scope="col">Weeks on Chart</th>
                   </tr>
+                </thead>
+                <tbody>
                   <script>
                     $(document).ready(function () {
                       // FETCHING DATA FROM JSON FILE
-                      $.getJSON("SLDatabase.json", function (data) { 
+                      $.getJSON("SLDatabase.json", function (data) {
                           var student = '';
                   
                           // ITERATING THROUGH OBJECTS
@@ -600,13 +602,10 @@
                       });
                     })
                   </script>
-                </thead>
               </table><!-- end of pricing section -->
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
 
@@ -622,7 +621,7 @@
         </div>
 
         <div class="iframe-container">
-          <iframe title="VisualisasiDataScraping" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=613b9035-f73b-450c-8ff5-310bc05b14e1&autoAuth=true&ctid=98374cd7-c8b8-413c-8476-b8722ae7e8e8" frameborder="0" allowFullScreen="true"></iframe>
+          <iframe title="VisualisasiDataKelA3(final)" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=c140f087-93cc-46d6-ac2a-b84b97c9a490&autoAuth=true&ctid=98374cd7-c8b8-413c-8476-b8722ae7e8e8" frameborder="0" allowFullScreen="true"></iframe>
         </div>
 
       </div>
